@@ -1,5 +1,6 @@
 package com.example.myapplication;
-
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.Adapter;
 public class ExampleItem {
     private String mLine1;
     private String mLine2;

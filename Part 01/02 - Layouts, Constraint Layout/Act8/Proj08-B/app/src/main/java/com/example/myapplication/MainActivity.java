@@ -1,8 +1,8 @@
 package com.example.myapplication;
 
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.Placeholder;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.Placeholder;
 
 import android.os.Bundle;
 import android.transition.TransitionManager;
