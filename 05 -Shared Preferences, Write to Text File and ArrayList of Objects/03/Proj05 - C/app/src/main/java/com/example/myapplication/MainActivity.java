@@ -1,29 +1,24 @@
 package com.example.myapplication;
-/** Description: Save and Load Txt file. */
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
-/** ImportLib {@LinearLayoutManager,@RecyclerView,@SharedPreferences,@View,@Button,@EditText,@Type,@ArrayList,@Gson,@TypeToken}. */
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.Adapter;
-import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
-
-public class MainActivity<ExampleAdapter> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     ArrayList<ExampleItem> mExampleList;
-    private RecyclerView mRecyclerView;
     private ExampleAdapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +60,13 @@ public class MainActivity<ExampleAdapter> extends AppCompatActivity {
     }
 
     private void buildRecyclerView() {
-        mRecyclerView = findViewById(R.id.recyclerview);
+        RecyclerView mRecyclerView = findViewById(R.id.recyclerview);
         mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mAdapter = new ExampleAdapter(mExampleList);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter((RecyclerView.Adapter) mAdapter);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     private void setInsertButton() {

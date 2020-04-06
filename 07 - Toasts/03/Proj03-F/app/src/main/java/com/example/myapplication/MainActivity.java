@@ -1,12 +1,11 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import es.dmoral.toasty.Toasty;
 
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 Toasty.warning(this, "This is a warning Toast", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button_normal:
-                Toasty.normal(this, "This is a normal Toast", Toast.LENGTH_SHORT, ContextCompat.getDrawable(this, R.drawable.ic_person_black_24dp)).show();
+                Toasty.normal(this, "This is a normal Toast", Toast.LENGTH_SHORT, ContextCompat.getDrawable(this, R.drawable.ic_android)).show();
                 break;
         }
     }
